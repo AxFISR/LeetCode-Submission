@@ -12,15 +12,8 @@ class Solution(object):
         #one time we go through the linked list to save length
         #second time to find mid node
         curr = head
-
-        listLength = 0
+        myNodes = []
         while curr != None:
-            listLength += 1
+            myNodes.append(curr)
             curr = curr.next
-        listLength = int(round(listLength/2))
-
-        for i in range(listLength):
-            head = head.next
-        return head
-
-        
+        return myNodes[int(round(len(myNodes)/2))]
