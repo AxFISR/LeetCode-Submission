@@ -4,10 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        myMap = {}
-        for value in (nums):
-            if value in myMap:
+        dupeMap = {}
+
+        for num in nums:
+            if dupeMap.get(num,0):
                 return True
-            myMap[value] = True
+            dupeMap[num] = 1
         return False
         
